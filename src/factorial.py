@@ -20,11 +20,13 @@ def factorial_recursive(num):
 
 def main():
     while True:
-        
-        num = int(input("Ingrese un numero para aplicarle su factorial: "))
-        print(f"El factorial de su numero es: {factorial_iterative(num)}\nY lo mismo pero calculado de otra forma: {factorial_recursive(num)}")
+        try:
+            num = int(input("Ingrese un numero para aplicarle su factorial: "))
+            print(f"El factorial de su numero es: {factorial_iterative(num)}\nY lo mismo pero calculado de otra forma: {factorial_recursive(num)}")
+        except:
+            print("Error: Por favor ingrese un numero valido.")
+
         continuar = input("¿Desea agregar otro numero? (y/n) ")
-        
         if continuar.lower() != "y":
             break
 
