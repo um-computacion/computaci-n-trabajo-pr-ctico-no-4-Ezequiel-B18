@@ -1,7 +1,15 @@
-def factorial_iterative():
-    pass
+def factorial_iterative(num):
+    if num < 0:
+        raise ValueError('Los factoriales no estan definidos para numeros negativos')
 
-def factorial_recursive():
+    factorial_res = 1
+    
+    for i in range(1, num + 1):
+        factorial_res *= i
+    
+    return factorial_res
+
+def factorial_recursive(num):
     pass
 
 def main():
