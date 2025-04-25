@@ -1,4 +1,22 @@
 def factorial_iterative(num):
+    """
+    Calcula el factorial de un número utilizando un enfoque iterativo.
+
+    Args:
+        num (int): El número para calcular su factorial. Debe ser no negativo.
+
+    Returns:
+        int: El factorial del número de entrada.
+
+    Raises:
+        ValueError: Si el número es negativo.
+
+    Examples:
+        >>> factorial_iterative(5)
+        120
+        >>> factorial_iterative(0)
+        1
+    """
     if num < 0:
         raise ValueError('Los factoriales no estan definidos para numeros negativos.')
 
@@ -10,6 +28,24 @@ def factorial_iterative(num):
     return factorial_res
 
 def factorial_recursive(num):
+    """
+    Calcula el factorial de un número utilizando un enfoque recursivo.
+
+    Args:
+        num (int): El número para calcular su factorial. Debe ser no negativo.
+
+    Returns:
+        int: El factorial del número de entrada.
+
+    Raises:
+        ValueError: Si el número es negativo.
+
+    Examples:
+        >>> factorial_recursive(5)
+        120
+        >>> factorial_recursive(0)
+        1
+    """
     if num < 0:
         raise ValueError('Los factoriales no estan definidos para numeros negativos.')
 
@@ -19,6 +55,11 @@ def factorial_recursive(num):
     return num * factorial_recursive(num - 1)
 
 def main():
+    """
+    Función principal que interactúa con el usuario para calcular factoriales.
+    Permite al usuario ingresar números y muestra sus factoriales calculados
+    tanto de forma iterativa como recursiva.
+    """
     while True:
         try:
             num = int(input("Ingrese un numero para aplicarle su factorial: "))
