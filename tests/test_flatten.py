@@ -15,7 +15,7 @@ class TestFlatten(unittest.TestCase):
 
     def test_mixed_structures(self):
         lista = [1, (2, 3), {'a': 4, 'b': 5}, [6, [7, 8]]]
-        esperada = [1, 2, 3, 'a', 4, 'b',5 ,6 ,7, 8]
+        esperada = [1, 2, 3, 'a', 4,'b' ,5 ,6 ,7 ,8]
         self.assertEqual(flatten(lista), esperada)
 
     def test_empty_list(self):

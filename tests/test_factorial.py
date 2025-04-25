@@ -23,7 +23,7 @@ class TestFactorial(unittest.TestCase):
     #Tests recursivos
 
     def test_factorial_recursive_zero(self):
-        self.assertEqual(factorial_iterative(0), 1)
+        self.assertEqual(factorial_recursive(0), 1)
 
     def test_factorial_recursive_small(self):
         self.assertEqual(factorial_recursive(2), 2)
